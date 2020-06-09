@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
@@ -6,6 +7,8 @@ using UnityEngine;
 public class boidtracer : MonoBehaviour
 {
     private GameObject target;
+
+    private Boolean targetSet = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +18,18 @@ public class boidtracer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.LookAt(target.transform);
+        if (targetSet)
+        {
+            transform.LookAt(target.transform);
+        }
+        ;
     }
 
     public void setTarget(GameObject go)
     {
+        Debug.Log("tracer");
         target = go;
+        targetSet = true;
     }
 
     

@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2851395806593f448bcf0a7563c94c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boid: {fileID: 2392082134831425418, guid: 90e4b0f817c9de5478e12a59ffb829d9, type: 3}
+  boid: {fileID: 7838506185783784500, guid: 9b60d0264b0b30445ab580fe04d0cc8b, type: 3}
   spawnPoint: {fileID: 2994284859093949260}
-  anzahl: 20
-  camHandler: {fileID: 0}
+  anzahl: 50
+  camHandler: {fileID: 7076825825500646590, guid: 5388b33e920ce9646a5a658975a4d23f,
+    type: 3}
