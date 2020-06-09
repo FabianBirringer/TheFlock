@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3036802761412593266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.004, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 7272432729418254201}
   m_RootOrder: 0
@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 3715607336205266793}
   - component: {fileID: 146308128540477803}
   - component: {fileID: 7422748080397882772}
+  - component: {fileID: 2309830619839076723}
   m_Layer: 0
   m_Name: Boid
   m_TagString: boid
@@ -150,8 +151,20 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2309830619839076723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7838506185783784500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0c0ee3f798ab441a8843f1799f27fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

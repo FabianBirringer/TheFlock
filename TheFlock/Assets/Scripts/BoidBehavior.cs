@@ -9,12 +9,11 @@ using UnityEngine;
 public class BoidBehavior : MonoBehaviour
 {
     private ArrayList boids = new ArrayList();
-    private int count;
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        count = 0;
+      
     }
 
     // Update is called once per frame
@@ -26,21 +25,29 @@ public class BoidBehavior : MonoBehaviour
     private void OnTriggerEnter(Collider Other)
     {
         GameObject go = Other.gameObject;
-        if (go.tag == "boid"&& go.GetInstanceID()!=GetInstanceID() && go.tag!="collider")
+        if (go.CompareTag("boid")&& go.GetInstanceID()!=GetInstanceID())
         {
             if (boids.Contains(go))
             {
                 return;
             }
+            
             boids.Add(go);
+            Debug.Log(boids.Count);
+            
         }
     }
     private void OnTriggerExit(Collider Other)
     {
         GameObject go = Other.gameObject;
-        if (go.tag == "boid" && go.GetInstanceID()!=GetInstanceID())
+        if (go.CompareTag("boid") && go.GetInstanceID()!=GetInstanceID())
         {
+            if (!boids.Contains(go))
+            {
+                return;
+            }
             boids.Remove(go);
+            Debug.Log(boids.Count);
         }
     }
 }
