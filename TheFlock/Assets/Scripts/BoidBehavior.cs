@@ -6,7 +6,7 @@ using System.Globalization;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class getNeighbour : MonoBehaviour
+public class BoidBehavior : MonoBehaviour
 {
     private ArrayList boids = new ArrayList();
     private int count;
