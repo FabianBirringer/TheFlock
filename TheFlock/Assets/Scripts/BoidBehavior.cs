@@ -10,6 +10,7 @@ public class BoidBehavior : MonoBehaviour
 {
     private ArrayList boids = new ArrayList();
     public Rigidbody rb;
+    private float speed = 30f;
     
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,8 @@ public class BoidBehavior : MonoBehaviour
         
         transform.forward = (forward+((avoidingDirection+centerDirection+allignmentDirection)).normalized)/2;
 
-        rb.position += transform.forward;
+        rb.velocity = transform.forward*speed;
+       // rb.position += transform.forward;
         Debug.Log("centerMagnitude: " + centerDirection.magnitude + "avoidingMagnitude: " + avoidingDirection.magnitude + "allignmentMagnitude: " + allignmentDirection.magnitude);
     }
     
@@ -82,8 +84,7 @@ public class BoidBehavior : MonoBehaviour
         {
             return avoidingDirection;
         }
-        avoidingDirection = avoidingDirection ;
-        
+
         return avoidingDirection/c;
     }
 
@@ -122,6 +123,7 @@ public class BoidBehavior : MonoBehaviour
             
             boids.Add(go);
             //Debug.Log(boids.Count);
+            //Debug.Log(go.tag);
             
         }
     }
@@ -136,6 +138,7 @@ public class BoidBehavior : MonoBehaviour
                 return;
             }
             boids.Remove(go);
+            //Debug.Log(go.tag);
             //Debug.Log(boids.Count);
         }
     }
