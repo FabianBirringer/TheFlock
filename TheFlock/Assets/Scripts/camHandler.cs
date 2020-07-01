@@ -22,7 +22,6 @@ public class camHandler : MonoBehaviour
     {
         if (Input.GetKeyUp("c"))
         {
-            Debug.Log("hello");
             if (selectedCam == 1)
             {
                 cam2.enabled = true;
@@ -40,7 +39,6 @@ public class camHandler : MonoBehaviour
 
     public void setTargetToCams(GameObject go)
     {
-        Debug.Log("handler");
         cam2.GetComponent<attachToBoid>().setTarget(go); 
         cam1.GetComponent<boidtracer>().setTarget(go);
     }

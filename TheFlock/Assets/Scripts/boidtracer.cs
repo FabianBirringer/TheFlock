@@ -27,7 +27,6 @@ public class boidtracer : MonoBehaviour
 
     public void setTarget(GameObject go)
     {
-        Debug.Log("tracer");
         target = go;
         targetSet = true;
     }
